@@ -7,3 +7,13 @@
 .nav-logo {
     height: 50px;
 }
+
+.nav ul li{
+    list-style: none;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.nav ul {
+    display: flex;
+}

@@ -1,0 +1,13 @@
+
+.bg-grey{
+    background-color:#D7D7D7;
+}
+
+.section1{
+    width: 100%;
+    display:block;
+    height:100vh;
+    background-image: url(../../assets/Rectangle\ 67.svg);
+    background-repeat: no-repeat;
+    background-position-x:450%;
+}

@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 import Dashboard from './views/dashboard';
 import { ThemeProvider } from '@material-ui/core';
-import theme from 'src/theme';
+import theme from './theme';
 
 const App = props => {
   return(

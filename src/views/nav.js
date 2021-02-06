@@ -7,52 +7,52 @@ import {
 
 const nav = [
   {
-    title:'about me'
+    title: 'about me'
   },
   {
-    title:'skill'
+    title: 'skill'
   },
   {
-    title:'portofolio'
+    title: 'portofolio'
   },
   {
-    title:'contact me'
+    title: 'contact me'
   }
 ]
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow:1,
+    flexGrow: 1,
   }
 }));
 
 
-const Nav = () =>{
+const Nav = () => {
   const classes = useStyles();
-    return (
-      <nav className={`nav ${classes.root}`}>
-        <Grid containter >
-          <Grid item xs={2}>
-            <img
+  return (
+    <nav className={`nav ${classes.root}`}>
+      <Grid container spacing={3}>
+        <Grid item xs={6} sm={4}>
+          <img
             src={Logo}
             className="nav-logo"
-            />
-          </Grid>
-          <Grid item xs={6}>
-            <ul>
-            { nav.map((content, index) => 
+          />
+        </Grid>
+        <Grid item xs={6} sm={4}>
+          <ul>
+            {nav.map((content, index) =>
               <li key={index} >
                 <a>
                   {content.title}
                 </a>
               </li>
-              )
+            )
             }
-            </ul>
-          </Grid>
+          </ul>
         </Grid>
-      </nav>
-    )
+      </Grid>
+    </nav>
+  )
 }
 
 export default Nav;

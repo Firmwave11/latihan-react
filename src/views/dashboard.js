@@ -7,6 +7,7 @@ import {
   Grid
 }
   from '@material-ui/core';
+import Footer from './footer';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: 1400
     }
   },
-  head:{
-    marginTop:56
+  head: {
+    marginTop: 56
   }
 }));
 
@@ -28,14 +29,17 @@ const Dashboard = () => {
     <div className="section1 bg-grey">
       <Container className={classes.container} maxWidth={false}
       >
-        <Grid container spacing={4}> 
+        <Grid container spacing={4}>
           <Grid item lg={12}>
             <Nav
-            className={classes.head}
+              className={classes.head}
             />
           </Grid>
           <Grid item lg={12}>
-            <ContentInfo/>
+            <ContentInfo />
+          </Grid>
+          <Grid item lg={12}>
+            <Footer />
           </Grid>
         </Grid>
       </Container>

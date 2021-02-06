@@ -8,21 +8,25 @@ import {
   from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
-  titleHi:{
-    marginBottom:54
+  titleHi: {
+    marginBottom: 54
   }
 }));
-const ContentInfo = () =>{
+const ContentInfo = () => {
   const classes = useStyles();
   return (
-      <Grid container alignItems="center">
-        <Grid item lg={6}>
-          <Typography variant="h5" className={classes.titleHi}>
-            Hi, I am
+    <Grid container alignItems="center">
+      <Grid item lg={6}>
+        <Typography variant="h5" className={classes.titleHi}>
+          Hi, I am
           </Typography>
-        </Grid>
+        <Typography variant="h3" className={classes.titleHi}>
+          Rama Sapto <br />
+            Front-end Developer / UI Designer
+          </Typography>
       </Grid>
-    )
+    </Grid>
+  )
 
 }
 export default ContentInfo;

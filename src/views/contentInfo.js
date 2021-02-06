@@ -3,9 +3,13 @@ import {
   Container,
   makeStyles,
   Typography,
-  Grid
+  Grid,
+  ListItemIcon
 }
   from '@material-ui/core';
+import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import clsx from 'clsx';
 
 const useStyles = makeStyles((theme) => ({
@@ -19,10 +23,27 @@ const useStyles = makeStyles((theme) => ({
   },
   titleHi: {
     marginBottom: 54
-  }
+  },
+  socialMedia: {
+    display:'flex',
 
+  }
 }));
 const ContentInfo = () => {
+  const socialMedia = [
+    {
+      icons:(<AlternateEmailIcon/>),
+      link:"gmail.com/donisilalahi69",
+    },
+    {
+      icons:(<GitHubIcon/>),
+      link:"github.com/DonniCeoOK",
+    },  
+    {
+      icons:(<LinkedInIcon/>),
+      link:"Linkedin.com/donniPS",
+    }
+  ]
   const classes = useStyles();
   return (
     <Grid container alignItems="center">
@@ -32,10 +53,20 @@ const ContentInfo = () => {
           </Typography>
         <Typography variant="h3" className={classes.titleTypo}>
           Donni Septian Silalahi 
-          </Typography>
-          <Typography variant="h4" className={classes.subtitle}>
-            CEO / Matahari
-          </Typography>
+        </Typography>
+        <Typography variant="h4" className={classes.subtitle}>
+          CEO / Matahari
+        </Typography>
+        <div className={classes.socialMedia}>
+          {socialMedia.map((sm)=>{
+          <a key={sm.link} href={sm.link}>
+            {console.log(sm)}
+            <ListItemIcon>
+            {sm.icons}
+            </ListItemIcon>
+          </a>
+          })}
+        </div>
       </Grid>
     </Grid>
   )

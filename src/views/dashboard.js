@@ -38,9 +38,9 @@ const Dashboard = () => {
           <Grid item lg={12}>
             <ContentInfo />
           </Grid>
-          <Grid item lg={12}>
+          {/* <Grid item lg={12}>
             <Footer />
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </div>

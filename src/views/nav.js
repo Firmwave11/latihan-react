@@ -4,47 +4,66 @@ import {
   makeStyles,
   Grid
 } from '@material-ui/core';
+import clsx from 'clsx';
 
 const nav = [
   {
-    title: 'about me'
+    title: 'About me'
   },
   {
-    title: 'skill'
+    title: 'Skill'
   },
   {
-    title: 'portofolio'
+    title: 'Portofolio'
   },
   {
-    title: 'contact me'
+    title: 'CONTACT ME'
   }
 ]
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+  },
+  buttonNav:{
+    display:"flex",
+    justifyContent:"center",
+    alignItems:"center",
+    height:46,
+    width:147,
+    borderRadius:30,
+    backgroundColor:"white",
+    color:"black !important"
   }
 }));
 
 
-const Nav = () => {
+const Nav = ({
+  className,
+}) => {
   const classes = useStyles();
   return (
-    <nav className={`nav ${classes.root}`}>
-      <Grid container>
+    <nav className={`nav ${clsx(classes.root,className)}`}>
+      <Grid container alignItems="center" justify="space-between">
         <Grid item xs={6}>
           <img
             src={Logo}
             className="nav-logo"
           />
         </Grid>
-        <Grid item xs={6} sm={4}>
+        <Grid item xs={6} sm="auto">
           <ul>
             {nav.map((content, index) =>
               <li key={index} >
+                {content.title != "CONTACT ME"?
                 <a>
                   {content.title}
                 </a>
+                 :
+                <a className={classes.buttonNav}>
+                  {content.title}
+                </a>
+                }
               </li>
             )
             }

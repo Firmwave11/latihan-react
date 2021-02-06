@@ -10,9 +10,16 @@
 }
 
 .nav ul li {
+  display:flex;
+  align-items: center;
   list-style: none;
-  margin-right: 30px;
+  margin-right: 70px;
 }
+
+.nav ul li:last-child{
+  margin-right: 0;
+}
+
 .nav ul li a {
   color: white;
   font-weight: bold;

@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 const ContentInfo = () => {
-  const socialMedia = [
+  const socialMedias = [
     {
       icons:(<AlternateEmailIcon/>),
       link:"gmail.com/donisilalahi69",
@@ -58,14 +58,11 @@ const ContentInfo = () => {
           CEO / Matahari
         </Typography>
         <div className={classes.socialMedia}>
-          {socialMedia.map((sm)=>{
+          {socialMedias.map((sm)=>
           <a key={sm.link} href={sm.link}>
-            {console.log(sm)}
-            <ListItemIcon>
             {sm.icons}
-            </ListItemIcon>
           </a>
-          })}
+          )}
         </div>
       </Grid>
     </Grid>

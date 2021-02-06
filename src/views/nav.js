@@ -31,8 +31,8 @@ const Nav = () => {
   const classes = useStyles();
   return (
     <nav className={`nav ${classes.root}`}>
-      <Grid container spacing={3}>
-        <Grid item xs={6} sm={4}>
+      <Grid container>
+        <Grid item xs={6}>
           <img
             src={Logo}
             className="nav-logo"

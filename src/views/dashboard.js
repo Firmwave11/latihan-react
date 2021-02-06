@@ -9,15 +9,19 @@ import {
 const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: '100%',
+  },
+  container: {
+    [theme.breakpoints.up("md")]: {
+      width: 1400
+    }
   }
 }));
 
 const Dashboard = () => {
-  const styles = useStyles()
+  const classes = useStyles()
   return (
     <div className="section1 bg-grey">
-      <Container
-        maxWidth="md">
+      <Container maxWidth="lg">
         <Nav />
       </Container>
     </div>
